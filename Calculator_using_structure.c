@@ -1,14 +1,14 @@
-#this code with purpose to create a simple calculator to do the + - * / operations with integer and float number
+//this code with purpose to create a simple calculator to do the + - * / operations with integer and float number
 #include <stdio.h>
 #include <stdlib.h>
-# structure contain data that will be used to manipulate the calculator
+//structure contain data that will be used to manipulate the calculator
 typedef struct{
     float a,b;
     char c;
 }data_calcul;
 int main() {
-    float d; #to stock the result
-    int i=0; #initialise for the while boucle
+    float d; //to stock the result
+    int i=0; //initialise for the while boucle
     data_calcul d1;
     while (i<=10){
       printf("les entrees a et b :");
@@ -16,12 +16,12 @@ int main() {
       scanf("%2f",&d1.b);
       printf("le symbole : ");
       scanf(" %c",&d1.c);
-      # if none of the symbole then quit the program
+      // if none of the symbole used, then quit the program
       if(d1.c!='+' && d1.c!='-' && d1.c!='*' && d1.c!='/'){
         printf("option non disponible, quitte le programme");
         exit(EXIT_FAILURE);
       }
-      #else execute the program
+      // else execute the program
       else{
         switch (d1.c){
             case '+':
