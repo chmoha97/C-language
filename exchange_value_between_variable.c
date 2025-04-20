@@ -18,5 +18,6 @@ int main(){
     exchange(&x,&y);
     // print values of variable after exchange
     printf("valeur de x: %.2f et y: %.2f",x,y); //display two value after comma
+    return 0;
 }
 
