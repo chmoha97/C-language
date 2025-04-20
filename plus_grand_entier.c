@@ -16,7 +16,7 @@ int main(){
         //verify the big number between a,b and c and print the result
         compare(a,b,c);
     }
-
+    return 0
 }
 
 // The architecture of the function compare
