@@ -12,46 +12,40 @@ int main() {
     data_calcul d1;
     while (i<=10){
       printf("les entrees a et b :");
-      scanf("%2f",&d1.a);
-      scanf("%2f",&d1.b);
+      scanf("%f",&d1.a);
+      scanf("%f",&d1.b);
       printf("le symbole : ");
       scanf(" %c",&d1.c);
-      // if none of the symbole used, then quit the program
-      if(d1.c!='+' && d1.c!='-' && d1.c!='*' && d1.c!='/'){
-        printf("option non disponible, quitte le programme");
-        exit(EXIT_FAILURE);
-      }
-      // else execute the program
-      else{
-        switch (d1.c){
-            case '+':
-            d=d1.a+d1.b;
-            printf("le resultat est : %.2f\n",d);
-            break;
-            case '-':
-            d=d1.a-d1.b;
-            printf("le resultat est : %.2f\n",d);
-            break;
-            case '*':
-            d=d1.a*d1.b;
-            printf("le resultat est : %.2f\n",d);
-            break;
-            case '/':
-            if(d1.b!=0){
-              d=d1.a/d1.b;
-              printf("le resultat est : %.2f\n",d);
-              break;
-              }
-            else{
-              printf("division impossible\n");
-              break;
-              }
-            default:
-            printf ("undifined symbol\n");
+      switch (d1.c){
+          case '+':
+          d=d1.a+d1.b;
+          printf("le resultat est : %.2f\n",d);
+          break;
+          case '-':
+          d=d1.a-d1.b;
+          printf("le resultat est : %.2f\n",d);
+          break;
+          case '*':
+          d=d1.a*d1.b;
+          printf("le resultat est : %.2f\n",d);
+          break;
+          case '/':
+           if(d1.b!=0){
+             d=d1.a/d1.b;
+             printf("le resultat est : %.2f\n",d);
+             break;
+             }
+           else{
+             printf("division impossible\n");
+             break;
+             }
+          default:
+          // if none of the symbole used, then quit the program
+          printf("option non disponible, quitte le programme");
+          exit(EXIT_FAILURE);
         }
         printf("iteration i est : %d\n", i);
         i++;
       }
-   }
-    return 0;
+   return 0;
 }
