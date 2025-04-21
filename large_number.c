@@ -1,4 +1,4 @@
-//the purpose of this code is to compare between three integer number intrduced by the user
+//the purpose of this code is to compare between three number intrduced by the user
 #include<stdio.h>
 
 //define prototype of the function
